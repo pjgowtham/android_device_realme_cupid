@@ -109,8 +109,8 @@ blob_fixups: blob_fixups_user_type = {
 }  # fmt: skip
 
 module = ExtractUtilsModule(
-    'lemonade',
-    'oneplus',
+    'cupidr',
+    'realme',
     namespace_imports=namespace_imports,
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
@@ -119,6 +119,6 @@ module = ExtractUtilsModule(
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(
-        module, 'sm8350-common', module.vendor
+        module, '../oneplus/sm8350-common', module.vendor
     )
     utils.run()
